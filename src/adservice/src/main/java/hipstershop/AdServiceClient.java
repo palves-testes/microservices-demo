@@ -37,7 +37,7 @@ public class AdServiceClient {
   private final hipstershop.AdServiceGrpc.AdServiceBlockingStub blockingStub;
 
   /** Construct client connecting to Ad Service at {@code host:port}. */
-  private AdServiceClient(String host, int port) {
+  public AdServiceClient(String host, int port) {
     this(
         ManagedChannelBuilder.forAddress(host, port)
             // Channels are secure by default (via SSL/TLS). For the example we disable TLS to avoid
